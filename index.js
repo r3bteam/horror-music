@@ -33,7 +33,11 @@ let selectUser; // Selecting user from guild
 
 bot.on("ready", async () => {
 	console.log(`Bot is ready! ${bot.user.username}`);
+client.on('ready', async () => {
+    console.log('I am ready!');
 
+    client.user.setPresence({ game: { name: 'Horror Magasin', type: 2 } });
+});
 	/*try {
 		let link = await bot.generateInvite(["ADMINISTRATOR"]);
 		console.log(link);
